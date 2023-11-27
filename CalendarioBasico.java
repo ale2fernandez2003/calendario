@@ -44,4 +44,19 @@ public class CalendarioBasico
         mes = nuevoMes;
         ano = nuevoAno;
     }
+    
+    public void avanzarFecha(){
+        dia += 1;
+        if(dia > 30){
+            dia = 1;
+            mes += 1;
+            if(mes > 12){
+                mes = 1;
+                ano += 1;
+                if(ano > 99){
+                    ano = 1;
+                }
+            }
+        }
+    }
 }
